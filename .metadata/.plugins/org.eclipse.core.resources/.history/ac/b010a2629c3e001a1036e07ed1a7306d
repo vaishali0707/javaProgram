@@ -1,0 +1,29 @@
+package Lab3;
+
+public class SecondSmallestElement
+{
+	int getSmallestElement(int arr[])
+	{
+		int temp=0;
+		for(int i=0;i<arr.length;i++)
+		{
+			for(int j=i+1;j<arr.length;i++)
+			{
+				if(arr[i]>arr[j])
+				{
+					temp=arr[i];
+					arr[i]=arr[j];
+					arr[j]=temp;
+				}
+			}
+		}
+		return arr[arr.length-2];
+	}
+	public static void main(String args[])
+	{
+		SecondSmallestElement num=new SecondSmallestElement();
+		int arr[]= {7,5,4,8,2,1};
+		System.out.println(num.getSmallestElement(arr));
+	}
+
+}

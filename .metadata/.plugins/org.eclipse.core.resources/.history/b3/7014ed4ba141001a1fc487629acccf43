@@ -1,0 +1,40 @@
+package Test;
+import java.util.*;
+
+
+public class StudentClass 
+{
+	
+	public String name;
+	StudentClass(String name)
+	{
+		this.name=name;
+	}
+	public String toString()
+	{
+		return name;
+	}
+}
+class List
+{
+	public static ArrayList<StudentClass> removeDuplicates(ArrayList<StudentClass>a)
+	{
+		Set<StudentClass> s1=new HashSet<StudentClass>();
+		s1.addAll(a);
+		a.clear();
+		a.addAll(s1);
+		return a;
+		
+	}
+	public static void main(String args[])
+	{
+		ArrayList<StudentClass> sc=new ArrayList<StudentClass>();
+		sc.add(new StudentClass("Vaishali"));
+		sc.add(new StudentClass("Vishal"));
+		sc.add(new StudentClass("Ashish"));
+		sc.add(new StudentClass("Vishal"));
+		System.out.println("Without removing "+sc);
+		ArrayList<StudentClass>newList=removeDuplicates(sc);
+		System.out.println("After removing"+newList);	
+		}
+}

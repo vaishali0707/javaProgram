@@ -1,0 +1,31 @@
+package com.cap.lab.Exercise7;
+
+public class Sorting 
+{
+		public void getSorted(int arr[])
+		{
+			String s[]=new String[arr.length];
+			for(int i=0;i<arr.length;i++)
+			{
+				s[i]=String.valueOf(arr[i]);
+			}
+			StringBuilder sb=new StringBuilder();
+			for(int i=0;i<s.length;i++)
+			{
+				sb.append(s[i]);
+			}
+			sb.reverse();
+			System.out.println(sb);	
+			
+		}
+		public static void main(String args[])
+		{
+			int arr[]= {123,432,543,567,981};
+			Sorting sorted=new Sorting();
+			sorted.getSorted(arr);
+		}
+
+	}
+
+
+}

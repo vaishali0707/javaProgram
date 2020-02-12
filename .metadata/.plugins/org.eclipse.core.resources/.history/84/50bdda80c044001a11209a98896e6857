@@ -1,0 +1,33 @@
+package com.cap.lab.Exercise10;
+
+public class JobSeeker 
+{
+		void detail(String name)
+		{
+			String s1="job";
+			int lastIndex=name.lastIndexOf('_');
+			if(name.substring(lastIndex+1).equals(s1) && lastIndex>=8)
+			{
+				System.out.println(name);
+			}
+			else
+			{
+				System.out.println("Invalid username ");
+			}
+		}
+		public static void main(String args[])
+		{
+		JobSeeker js=new JobSeeker();
+		String s11="VaishaliT_job";
+		String s12="Vaishali_job";
+		String s13="Vishal_job";
+		js.detail(s11);
+		js.detail(s12);
+		js.detail(s13);
+		}
+		
+
+	}
+
+
+}

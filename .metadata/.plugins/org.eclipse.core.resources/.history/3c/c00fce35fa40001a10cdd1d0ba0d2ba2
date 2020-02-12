@@ -1,0 +1,18 @@
+package Lab6;
+import java.time.*;
+import java.util.*;
+
+public class Exercise1
+{  
+   public static void main(String[] args)
+    {
+        LocalDate pdate = LocalDate.of(2002,10,23);
+        LocalDate now = LocalDate.of(1998,07,07);
+ 
+        Period diff = Period.between(now,pdate );
+        int a=diff.getYears();
+        int b=diff.getMonths();
+        int c=diff.getDays();
+        System.out.println("Difference is "+a+" Years "+b+" Months "+c+" Days ");
+  }
+}

@@ -1,0 +1,33 @@
+package Test;
+import java.util.*;
+
+
+public class StudentClass 
+{
+	public int uid;
+	public String name;
+	StudentClass(int uid,String name)
+	{
+		this.uid=uid;
+		this.name=name;
+	}
+}
+class List
+{
+	public static void main(String args[])
+	{
+		ArrayList<StudentClass> sc=new ArrayList<StudentClass>();
+		sc.add(new StudentClass(1, "Vaishali"));
+		sc.add(new StudentClass(2,"Vishal"));
+		sc.add(new StudentClass(3,"Ashish"));
+		sc.add(new StudentClass(4,"Vishal"));
+		Iterator <StudentClass>i1=sc.iterator();
+		while(i1.hasNext())
+		{
+			StudentClass sc1=i1.next();
+			System.out.println(sc1.name);
+		}
+		
+		sc
+	}
+}
